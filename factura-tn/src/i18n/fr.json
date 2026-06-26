@@ -106,11 +106,48 @@
       "message": "La suppression de « {{name}} » est définitive. Les factures existantes ne seront pas affectées."
     }
   },
+  "product": {
+    "title": "Produits & Services",
+    "new": "Nouveau produit/service",
+    "create": "Créer un produit",
+    "edit": "Modifier le produit",
+    "name": "Nom",
+    "namePlaceholder": "Ex : Développement web, Conseil...",
+    "description": "Description",
+    "descriptionPlaceholder": "Description optionnelle",
+    "unitPrice": "Prix unitaire HT",
+    "vatRate": "Taux TVA",
+    "unit": "Unité",
+    "searchPlaceholder": "Rechercher par nom ou description...",
+    "noResults": "Aucun produit ne correspond à votre recherche",
+    "empty": {
+      "title": "Aucun produit pour l'instant",
+      "description": "Ajoutez vos produits et services pour les sélectionner rapidement lors de la facturation."
+    },
+    "deleteConfirm": {
+      "title": "Supprimer ce produit ?",
+      "message": "La suppression de « {{name}} » est définitive."
+    },
+    "units": {
+      "heure": "Heure",
+      "jour": "Jour",
+      "unité": "Unité",
+      "forfait": "Forfait",
+      "mois": "Mois"
+    },
+    "picker": {
+      "title": "Choisir un produit/service",
+      "searchPlaceholder": "Rechercher...",
+      "noProducts": "Aucun produit enregistré",
+      "noResults": "Aucun résultat"
+    }
+  },
   "invoice": {
     "title": "Factures",
     "new": "Nouvelle facture",
     "create": "Créer une facture",
     "edit": "Modifier la facture",
+    "details": "Détails de la facture",
     "number": "Numéro",
     "status": "Statut",
     "issueDate": "Date d'émission",
@@ -150,7 +187,8 @@
       "totalHT": "Total HT",
       "totalTVA": "TVA",
       "totalTTC": "Total TTC",
-      "remove": "Supprimer la ligne"
+      "remove": "Supprimer la ligne",
+      "pickProduct": "Choisir un produit"
     },
     "totals": {
       "totalHT": "Total HT",
@@ -165,6 +203,51 @@
       "filterByStatus": "Filtrer par statut",
       "empty": "Aucune facture trouvée",
       "emptyFiltered": "Aucune facture ne correspond à vos critères"
+    },
+    "detail": {
+      "backToList": "Retour à la liste",
+      "download": "Télécharger PDF",
+      "notFound": "Facture introuvable",
+      "notFoundDesc": "Cette facture n'existe pas ou a été supprimée.",
+      "totalsTitle": "Récapitulatif",
+      "pdfPreview": "Aperçu PDF"
+    },
+    "previewModal": {
+      "title": "Prévisualisation",
+      "close": "Fermer",
+      "emitFromModal": "Émettre & télécharger"
+    }
+  },
+  "settings": {
+    "title": "Paramètres",
+    "subtitle": "Configurez les informations de votre entreprise et l'apparence des factures.",
+    "saved": "Modifications enregistrées",
+    "company": {
+      "title": "Informations de l'entreprise",
+      "name": "Raison sociale",
+      "namePlaceholder": "Mon Entreprise SARL",
+      "email": "Email",
+      "phone": "Téléphone",
+      "address": "Adresse",
+      "city": "Ville",
+      "matriculeFiscal": "Matricule fiscal",
+      "rib": "RIB / Coordonnées bancaires",
+      "ribHint": "Affiché en pied de page sur les factures PDF"
+    },
+    "logo": {
+      "title": "Logo",
+      "upload": "+ Cliquer pour importer un logo",
+      "change": "Changer le logo",
+      "remove": "Supprimer le logo",
+      "hint": "PNG ou JPG recommandé — affiché dans l'en-tête des factures PDF"
+    },
+    "invoice": {
+      "title": "Apparence des factures",
+      "prefix": "Préfixe de numérotation",
+      "prefixHint": "Ex : FAC → FAC-2026-0001",
+      "footer": "Mention de pied de page",
+      "footerHint": "Texte libre ajouté sous la mention légale",
+      "footerPlaceholder": "Ex : Paiement à 30 jours — IBAN : TN59..."
     }
   }
 }

@@ -13,8 +13,6 @@ const STATUS_COLORS: Record<InvoiceStatus, string> = {
   overdue: 'bg-red-100 text-red-700 dark:bg-red-900/40 dark:text-red-300',
 }
 
-
-
 const ALL_STATUSES: InvoiceStatus[] = ['draft', 'sent', 'paid', 'overdue']
 
 function StatusBadge({ status }: { status: InvoiceStatus }) {
@@ -132,12 +130,20 @@ export function InvoiceListPage() {
                     className="transition-colors hover:bg-gray-50 dark:hover:bg-gray-800/50"
                   >
                     <td className="px-4 py-3">
-                      <span className="font-mono font-medium text-primary-600">
+                      <button
+                        onClick={() => navigate(`/invoices/${inv.id}`)}
+                        className="font-mono font-medium text-primary-600 hover:underline"
+                      >
                         {inv.number}
-                      </span>
+                      </button>
                     </td>
-                    <td className="px-4 py-3 text-gray-900 dark:text-white">
-                      {inv.client.name}
+                    <td className="px-4 py-3">
+                      <button
+                        onClick={() => navigate(`/invoices/${inv.id}`)}
+                        className="text-gray-900 hover:text-primary-600 dark:text-white"
+                      >
+                        {inv.client.name}
+                      </button>
                     </td>
                     <td className="px-4 py-3 text-gray-500" dir="ltr">
                       {formatDate(inv.issueDate, language)}

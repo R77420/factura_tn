@@ -106,11 +106,48 @@
       "message": "سيتم حذف «{{name}}» نهائياً. لن تتأثر الفواتير الموجودة."
     }
   },
+  "product": {
+    "title": "المنتجات والخدمات",
+    "new": "منتج/خدمة جديدة",
+    "create": "إنشاء منتج",
+    "edit": "تعديل المنتج",
+    "name": "الاسم",
+    "namePlaceholder": "مثال: تطوير ويب، استشارة...",
+    "description": "الوصف",
+    "descriptionPlaceholder": "وصف اختياري",
+    "unitPrice": "سعر الوحدة HT",
+    "vatRate": "نسبة TVA",
+    "unit": "الوحدة",
+    "searchPlaceholder": "بحث بالاسم أو الوصف...",
+    "noResults": "لا يوجد منتج يطابق بحثك",
+    "empty": {
+      "title": "لا توجد منتجات بعد",
+      "description": "أضف منتجاتك وخدماتك لاختيارها بسرعة عند إصدار الفواتير."
+    },
+    "deleteConfirm": {
+      "title": "حذف هذا المنتج؟",
+      "message": "سيتم حذف «{{name}}» نهائياً."
+    },
+    "units": {
+      "heure": "ساعة",
+      "jour": "يوم",
+      "unité": "وحدة",
+      "forfait": "جزافي",
+      "mois": "شهر"
+    },
+    "picker": {
+      "title": "اختيار منتج/خدمة",
+      "searchPlaceholder": "بحث...",
+      "noProducts": "لا توجد منتجات مسجلة",
+      "noResults": "لا توجد نتائج"
+    }
+  },
   "invoice": {
     "title": "الفواتير",
     "new": "فاتورة جديدة",
     "create": "إنشاء فاتورة",
     "edit": "تعديل الفاتورة",
+    "details": "تفاصيل الفاتورة",
     "number": "الرقم",
     "status": "الحالة",
     "issueDate": "تاريخ الإصدار",
@@ -150,7 +187,8 @@
       "totalHT": "المجموع HT",
       "totalTVA": "TVA",
       "totalTTC": "المجموع TTC",
-      "remove": "حذف البند"
+      "remove": "حذف البند",
+      "pickProduct": "اختيار منتج"
     },
     "totals": {
       "totalHT": "المجموع HT",
@@ -165,6 +203,51 @@
       "filterByStatus": "تصفية حسب الحالة",
       "empty": "لا توجد فواتير",
       "emptyFiltered": "لا توجد فواتير تطابق معايير البحث"
+    },
+    "detail": {
+      "backToList": "العودة إلى القائمة",
+      "download": "تحميل PDF",
+      "notFound": "الفاتورة غير موجودة",
+      "notFoundDesc": "هذه الفاتورة غير موجودة أو تم حذفها.",
+      "totalsTitle": "الملخص",
+      "pdfPreview": "معاينة PDF"
+    },
+    "previewModal": {
+      "title": "المعاينة",
+      "close": "إغلاق",
+      "emitFromModal": "إصدار وتحميل"
+    }
+  },
+  "settings": {
+    "title": "الإعدادات",
+    "subtitle": "أدخل معلومات شركتك وخصص مظهر الفواتير.",
+    "saved": "تم حفظ التعديلات",
+    "company": {
+      "title": "معلومات الشركة",
+      "name": "الاسم التجاري",
+      "namePlaceholder": "شركتي للخدمات",
+      "email": "البريد الإلكتروني",
+      "phone": "الهاتف",
+      "address": "العنوان",
+      "city": "المدينة",
+      "matriculeFiscal": "المعرف الجبائي",
+      "rib": "RIB / الحساب البنكي",
+      "ribHint": "يظهر في أسفل فاتورة PDF"
+    },
+    "logo": {
+      "title": "الشعار",
+      "upload": "+ انقر لاستيراد الشعار",
+      "change": "تغيير الشعار",
+      "remove": "حذف الشعار",
+      "hint": "PNG أو JPG — يظهر في رأس فاتورة PDF"
+    },
+    "invoice": {
+      "title": "مظهر الفاتورة",
+      "prefix": "بادئة الترقيم",
+      "prefixHint": "مثال: FAC ← FAC-2026-0001",
+      "footer": "نص ذيل الصفحة",
+      "footerHint": "نص حر يظهر أسفل المنشور القانوني",
+      "footerPlaceholder": "مثال: الدفع خلال 30 يوماً — IBAN: TN59..."
     }
   }
 }

@@ -3,10 +3,12 @@ import {
   Page,
   Text,
   View,
+  Image,
   StyleSheet,
   Font,
 } from '@react-pdf/renderer'
 import type { Invoice } from '../../types/invoice'
+import type { CompanySettings } from '../../types/settings'
 import { vatLabel } from '../../utils/invoice'
 
 // PDF uses fr-TN formatting regardless of app language (fiscal requirement)
@@ -66,6 +68,11 @@ const s = StyleSheet.create({
     borderRadius: 6,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  logoImage: {
+    width: 100,
+    height: 60,
+    objectFit: 'contain',
   },
   logoText: { fontSize: 16, fontFamily: 'Helvetica-Bold', color: C.navy },
   logoSub: { fontSize: 7, color: C.blue, marginTop: 2 },
@@ -257,6 +264,25 @@ const s = StyleSheet.create({
   },
   notesText: { fontSize: 8.5, color: C.muted },
 
+  // ── RIB ─────────────────────────────────────────────────
+  ribSection: {
+    marginTop: 16,
+    padding: 10,
+    backgroundColor: C.sky,
+    borderRadius: 4,
+    borderWidth: 1,
+    borderColor: C.border,
+  },
+  ribTitle: {
+    fontSize: 7.5,
+    fontFamily: 'Helvetica-Bold',
+    color: C.navy,
+    textTransform: 'uppercase',
+    letterSpacing: 0.5,
+    marginBottom: 3,
+  },
+  ribText: { fontSize: 8.5, color: C.text },
+
   // ── Legal mention ────────────────────────────────────────
   legalSection: {
     marginTop: 20,
@@ -270,6 +296,12 @@ const s = StyleSheet.create({
     color: C.muted,
     textAlign: 'center',
     fontStyle: 'italic',
+  },
+  customFooterText: {
+    fontSize: 8,
+    color: C.muted,
+    textAlign: 'center',
+    marginTop: 4,
   },
 
   // ── Footer ──────────────────────────────────────────────
@@ -289,9 +321,10 @@ const s = StyleSheet.create({
 
 interface Props {
   invoice: Invoice
+  settings?: CompanySettings
 }
 
-export function InvoicePDF({ invoice }: Props) {
+export function InvoicePDF({ invoice, settings }: Props) {
   const { seller, client, items, totals } = invoice
 
   return (
@@ -305,19 +338,23 @@ export function InvoicePDF({ invoice }: Props) {
 
         {/* ── Header ── */}
         <View style={s.header}>
-          <View style={s.logoBox}>
-            <Text style={s.logoText}>Factura</Text>
-            <Text style={s.logoSub}>TN</Text>
-          </View>
+          {settings?.logo ? (
+            <Image src={settings.logo} style={s.logoImage} />
+          ) : (
+            <View style={s.logoBox}>
+              <Text style={s.logoText}>Factura</Text>
+              <Text style={s.logoSub}>TN</Text>
+            </View>
+          )}
           <View style={s.sellerBlock}>
             <Text style={s.sellerName}>{seller.name}</Text>
             <Text style={s.sellerLine}>{seller.address}</Text>
             <Text style={s.sellerLine}>{seller.city}</Text>
             <Text style={s.sellerLine}>{seller.phone}</Text>
             <Text style={s.sellerLine}>{seller.email}</Text>
-            <Text style={s.sellerMatricule}>
-              MF : {seller.matriculeFiscal}
-            </Text>
+            {seller.matriculeFiscal ? (
+              <Text style={s.sellerMatricule}>MF : {seller.matriculeFiscal}</Text>
+            ) : null}
           </View>
         </View>
 
@@ -428,11 +465,22 @@ export function InvoicePDF({ invoice }: Props) {
           </View>
         ) : null}
 
+        {/* ── RIB ── */}
+        {settings?.rib ? (
+          <View style={s.ribSection}>
+            <Text style={s.ribTitle}>Coordonnées bancaires</Text>
+            <Text style={s.ribText}>{settings.rib}</Text>
+          </View>
+        ) : null}
+
         {/* ── Legal mention ── */}
         <View style={s.legalSection}>
           <Text style={s.legalText}>
             Facture conforme à la législation fiscale tunisienne (DGI) — Article 18 du Code de la TVA
           </Text>
+          {settings?.invoiceFooter ? (
+            <Text style={s.customFooterText}>{settings.invoiceFooter}</Text>
+          ) : null}
         </View>
 
         {/* ── Footer ── */}

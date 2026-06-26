@@ -4,11 +4,13 @@ import type { DocumentProps } from '@react-pdf/renderer'
 import type { ReactElement } from 'react'
 import { InvoicePDF } from '../components/invoice/InvoicePDF'
 import type { Invoice } from '../types/invoice'
+import { useSettingsStore } from '../stores/settingsStore'
 
 export async function downloadInvoicePDF(invoice: Invoice): Promise<void> {
+  const settings = useSettingsStore.getState()
   const element = createElement(
     InvoicePDF,
-    { invoice }
+    { invoice, settings }
   ) as unknown as ReactElement<DocumentProps>
   const blob = await pdf(element).toBlob()
 

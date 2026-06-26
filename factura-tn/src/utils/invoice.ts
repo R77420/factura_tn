@@ -62,10 +62,10 @@ export function calculateInvoiceTotals(items: LineItem[]): InvoiceTotals {
   return { totalHT, totalTVA, totalTTC, vatBreakdown }
 }
 
-export function generateInvoiceNumber(lastNumber: number): string {
+export function generateInvoiceNumber(lastNumber: number, prefix = 'FAC'): string {
   const year = new Date().getFullYear()
   const seq = String(lastNumber + 1).padStart(4, '0')
-  return `FAC-${year}-${seq}`
+  return `${prefix}-${year}-${seq}`
 }
 
 export const MATRICULE_FISCAL_REGEX = /^\d{7}\/[A-Z]\/[A-Z]\/\d{3}$/
