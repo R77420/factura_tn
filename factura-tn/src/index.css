@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Default LTR font */
+  html[lang='fr'] body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* RTL Arabic font */
+  html[lang='ar'] body {
+    font-family: 'Noto Sans Arabic', sans-serif;
+  }
+
+  body {
+    margin: 0;
+    @apply bg-gray-50 text-gray-900;
+  }
+
+  #root {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@layer utilities {
+  /* Enforce logical properties — never use margin-left/right or padding-left/right */
+  .ms-auto {
+    margin-inline-start: auto;
+  }
+  .me-auto {
+    margin-inline-end: auto;
+  }
+}

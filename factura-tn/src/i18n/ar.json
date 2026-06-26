@@ -1,0 +1,170 @@
+{
+  "nav": {
+    "dashboard": "لوحة التحكم",
+    "invoices": "الفواتير",
+    "clients": "العملاء",
+    "products": "المنتجات",
+    "reports": "التقارير",
+    "settings": "الإعدادات"
+  },
+  "buttons": {
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "create": "إنشاء",
+    "add": "إضافة",
+    "search": "بحث",
+    "export": "تصدير",
+    "print": "طباعة",
+    "close": "إغلاق",
+    "confirm": "تأكيد",
+    "back": "رجوع"
+  },
+  "errors": {
+    "required": "هذا الحقل مطلوب",
+    "invalidEmail": "عنوان البريد الإلكتروني غير صالح",
+    "invalidPhone": "رقم الهاتف غير صالح",
+    "networkError": "خطأ في الشبكة. يرجى المحاولة مجدداً.",
+    "notFound": "المورد غير موجود",
+    "unauthorized": "غير مصرح بالوصول",
+    "serverError": "خطأ في الخادم. يرجى التواصل مع الدعم الفني.",
+    "minLength": "يجب ألا يقل عن {{count}} أحرف",
+    "maxLength": "يجب ألا يتجاوز {{count}} أحرف",
+    "invalidMatricule": "صيغة غير صالحة. مثال: 1234567/A/P/000"
+  },
+  "common": {
+    "appName": "فاكتورا TN",
+    "loading": "جارٍ التحميل...",
+    "noData": "لا توجد بيانات متاحة",
+    "currency": "د.ت",
+    "language": "اللغة",
+    "switchLang": "Français",
+    "actions": "الإجراءات",
+    "filters": "التصفية",
+    "all": "الكل"
+  },
+  "dashboard": {
+    "title": "لوحة التحكم",
+    "welcome": "مرحباً بكم في فاكتورا TN",
+    "welcomeSub": "أدِر فواتيرك وتابع نشاطك في الوقت الفعلي.",
+    "firstInvoice": "إنشاء أول فاتورة",
+    "emptyTitle": "لا توجد فواتير بعد",
+    "emptyDescription": "ابدأ بإصدار الفواتير لعملائك وستظهر مؤشراتك هنا.",
+    "kpi": {
+      "monthlyRevenue": "رقم أعمال الشهر",
+      "invoiceCount": "الفواتير المُصدرة",
+      "vatDue": "TVA للتصريح",
+      "overdueCount": "الفواتير المتأخرة"
+    },
+    "chart": {
+      "title": "رقم الأعمال — آخر 6 أشهر",
+      "noData": "لا توجد بيانات في هذه الفترة",
+      "tooltip": "الإجمالي TTC"
+    },
+    "recentInvoices": {
+      "title": "آخر الفواتير",
+      "empty": "لا توجد فواتير حديثة",
+      "viewAll": "عرض جميع الفواتير"
+    },
+    "vatSummary": {
+      "title": "ملخص TVA للشهر",
+      "rate": "النسبة",
+      "baseHT": "الأساس HT",
+      "vatAmount": "مبلغ TVA",
+      "empty": "لا توجد TVA هذا الشهر",
+      "dgiNote": "للتصريح لدى الإدارة الجبائية"
+    },
+    "totalRevenue": "رقم الأعمال",
+    "pendingInvoices": "الفواتير المعلقة",
+    "paidInvoices": "الفواتير المدفوعة",
+    "totalClients": "إجمالي العملاء"
+  },
+  "client": {
+    "title": "العملاء",
+    "new": "عميل جديد",
+    "create": "إنشاء عميل",
+    "edit": "تعديل العميل",
+    "name": "الاسم التجاري / الاسم",
+    "namePlaceholder": "اسم الشركة أو العميل",
+    "email": "البريد الإلكتروني",
+    "phone": "الهاتف",
+    "address": "العنوان",
+    "city": "المدينة",
+    "matriculeFiscal": "المعرف الجبائي",
+    "matriculePlaceholder": "1234567/A/P/000",
+    "searchPlaceholder": "بحث بالاسم أو المعرف الجبائي...",
+    "noResults": "لا يوجد عميل يطابق بحثك",
+    "selectPlaceholder": "اختر عميلاً...",
+    "createNew": "إنشاء عميل جديد",
+    "empty": {
+      "title": "لا يوجد عملاء بعد",
+      "description": "ابدأ بإضافة أول عميل لربطه بفواتيرك."
+    },
+    "deleteConfirm": {
+      "title": "حذف العميل؟",
+      "message": "سيتم حذف «{{name}}» نهائياً. لن تتأثر الفواتير الموجودة."
+    }
+  },
+  "invoice": {
+    "title": "الفواتير",
+    "new": "فاتورة جديدة",
+    "create": "إنشاء فاتورة",
+    "edit": "تعديل الفاتورة",
+    "number": "الرقم",
+    "status": "الحالة",
+    "issueDate": "تاريخ الإصدار",
+    "dueDate": "تاريخ الاستحقاق",
+    "notes": "ملاحظات",
+    "notesPlaceholder": "شروط الدفع، ملاحظات...",
+    "sellerMatricule": "المعرف الجبائي (البائع)",
+    "preview": "معاينة",
+    "saveDraft": "حفظ كمسودة",
+    "emit": "إصدار الفاتورة",
+    "generating": "جارٍ الإنشاء...",
+    "status_draft": "مسودة",
+    "status_sent": "مُرسلة",
+    "status_paid": "مدفوعة",
+    "status_overdue": "متأخرة",
+    "client": {
+      "title": "العميل",
+      "select": "اختيار عميل",
+      "selectPlaceholder": "اختر عميلاً موجوداً...",
+      "name": "الاسم التجاري / الاسم",
+      "namePlaceholder": "اسم الشركة أو العميل",
+      "email": "البريد الإلكتروني",
+      "phone": "الهاتف",
+      "address": "العنوان",
+      "city": "المدينة",
+      "matriculeFiscal": "المعرف الجبائي",
+      "matriculePlaceholder": "1234567/A/P/000"
+    },
+    "lines": {
+      "title": "بنود الفاتورة",
+      "add": "إضافة بند",
+      "description": "الوصف",
+      "descriptionPlaceholder": "تسمية المنتج أو الخدمة",
+      "quantity": "الكمية",
+      "unitPrice": "سعر الوحدة HT",
+      "vatRate": "TVA",
+      "totalHT": "المجموع HT",
+      "totalTVA": "TVA",
+      "totalTTC": "المجموع TTC",
+      "remove": "حذف البند"
+    },
+    "totals": {
+      "totalHT": "المجموع HT",
+      "vatDetail": "TVA {{rate}}",
+      "totalTVA": "مجموع TVA",
+      "totalTTC": "المجموع TTC",
+      "vatBreakdown": "تفاصيل TVA"
+    },
+    "list": {
+      "title": "قائمة الفواتير",
+      "searchPlaceholder": "بحث برقم الفاتورة أو العميل...",
+      "filterByStatus": "تصفية حسب الحالة",
+      "empty": "لا توجد فواتير",
+      "emptyFiltered": "لا توجد فواتير تطابق معايير البحث"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "factura-tn",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "factura-tn"],
+      "port": 5174,
+      "autoPort": false
+    }
+  ]
+}

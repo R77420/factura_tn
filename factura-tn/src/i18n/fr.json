@@ -1,0 +1,170 @@
+{
+  "nav": {
+    "dashboard": "Tableau de bord",
+    "invoices": "Factures",
+    "clients": "Clients",
+    "products": "Produits",
+    "reports": "Rapports",
+    "settings": "Paramètres"
+  },
+  "buttons": {
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "create": "Créer",
+    "add": "Ajouter",
+    "search": "Rechercher",
+    "export": "Exporter",
+    "print": "Imprimer",
+    "close": "Fermer",
+    "confirm": "Confirmer",
+    "back": "Retour"
+  },
+  "errors": {
+    "required": "Ce champ est obligatoire",
+    "invalidEmail": "Adresse e-mail invalide",
+    "invalidPhone": "Numéro de téléphone invalide",
+    "networkError": "Erreur réseau. Veuillez réessayer.",
+    "notFound": "Ressource introuvable",
+    "unauthorized": "Accès non autorisé",
+    "serverError": "Erreur serveur. Veuillez contacter le support.",
+    "minLength": "Minimum {{count}} caractères requis",
+    "maxLength": "Maximum {{count}} caractères autorisés",
+    "invalidMatricule": "Format invalide. Exemple : 1234567/A/P/000"
+  },
+  "common": {
+    "appName": "Factura TN",
+    "loading": "Chargement...",
+    "noData": "Aucune donnée disponible",
+    "currency": "DT",
+    "language": "Langue",
+    "switchLang": "عربي",
+    "actions": "Actions",
+    "filters": "Filtres",
+    "all": "Tous"
+  },
+  "dashboard": {
+    "title": "Tableau de bord",
+    "welcome": "Bienvenue sur Factura TN",
+    "welcomeSub": "Gérez vos factures et suivez votre activité en temps réel.",
+    "firstInvoice": "Créer ma première facture",
+    "emptyTitle": "Aucune facture pour l'instant",
+    "emptyDescription": "Commencez à facturer vos clients pour voir vos indicateurs apparaître ici.",
+    "kpi": {
+      "monthlyRevenue": "CA du mois",
+      "invoiceCount": "Factures émises",
+      "vatDue": "TVA à déclarer",
+      "overdueCount": "Factures en retard"
+    },
+    "chart": {
+      "title": "Chiffre d'affaires — 6 derniers mois",
+      "noData": "Aucune donnée sur cette période",
+      "tooltip": "CA TTC"
+    },
+    "recentInvoices": {
+      "title": "Dernières factures",
+      "empty": "Aucune facture récente",
+      "viewAll": "Voir toutes les factures"
+    },
+    "vatSummary": {
+      "title": "Récapitulatif TVA du mois",
+      "rate": "Taux",
+      "baseHT": "Base HT",
+      "vatAmount": "Montant TVA",
+      "empty": "Aucune TVA ce mois",
+      "dgiNote": "À déclarer à la DGI"
+    },
+    "totalRevenue": "Chiffre d'affaires",
+    "pendingInvoices": "Factures en attente",
+    "paidInvoices": "Factures payées",
+    "totalClients": "Total clients"
+  },
+  "client": {
+    "title": "Clients",
+    "new": "Nouveau client",
+    "create": "Créer un client",
+    "edit": "Modifier le client",
+    "name": "Raison sociale / Nom",
+    "namePlaceholder": "Nom de l'entreprise ou du client",
+    "email": "Email",
+    "phone": "Téléphone",
+    "address": "Adresse",
+    "city": "Ville",
+    "matriculeFiscal": "Matricule fiscal",
+    "matriculePlaceholder": "1234567/A/P/000",
+    "searchPlaceholder": "Rechercher par nom ou matricule...",
+    "noResults": "Aucun client ne correspond à votre recherche",
+    "selectPlaceholder": "Sélectionner un client...",
+    "createNew": "Créer un nouveau client",
+    "empty": {
+      "title": "Aucun client pour l'instant",
+      "description": "Commencez par ajouter votre premier client pour l'associer à vos factures."
+    },
+    "deleteConfirm": {
+      "title": "Supprimer le client ?",
+      "message": "La suppression de « {{name}} » est définitive. Les factures existantes ne seront pas affectées."
+    }
+  },
+  "invoice": {
+    "title": "Factures",
+    "new": "Nouvelle facture",
+    "create": "Créer une facture",
+    "edit": "Modifier la facture",
+    "number": "Numéro",
+    "status": "Statut",
+    "issueDate": "Date d'émission",
+    "dueDate": "Date d'échéance",
+    "notes": "Notes",
+    "notesPlaceholder": "Conditions de paiement, remarques...",
+    "sellerMatricule": "Matricule fiscal (vendeur)",
+    "preview": "Prévisualiser",
+    "saveDraft": "Enregistrer brouillon",
+    "emit": "Émettre la facture",
+    "generating": "Génération en cours...",
+    "status_draft": "Brouillon",
+    "status_sent": "Envoyée",
+    "status_paid": "Payée",
+    "status_overdue": "En retard",
+    "client": {
+      "title": "Client",
+      "select": "Sélectionner un client",
+      "selectPlaceholder": "Choisir un client existant...",
+      "name": "Raison sociale / Nom",
+      "namePlaceholder": "Nom de l'entreprise ou du client",
+      "email": "Email",
+      "phone": "Téléphone",
+      "address": "Adresse",
+      "city": "Ville",
+      "matriculeFiscal": "Matricule fiscal",
+      "matriculePlaceholder": "1234567/A/P/000"
+    },
+    "lines": {
+      "title": "Lignes de facture",
+      "add": "Ajouter une ligne",
+      "description": "Description",
+      "descriptionPlaceholder": "Désignation du produit ou service",
+      "quantity": "Qté",
+      "unitPrice": "Prix unitaire HT",
+      "vatRate": "TVA",
+      "totalHT": "Total HT",
+      "totalTVA": "TVA",
+      "totalTTC": "Total TTC",
+      "remove": "Supprimer la ligne"
+    },
+    "totals": {
+      "totalHT": "Total HT",
+      "vatDetail": "TVA {{rate}}",
+      "totalTVA": "Total TVA",
+      "totalTTC": "Total TTC",
+      "vatBreakdown": "Détail TVA"
+    },
+    "list": {
+      "title": "Liste des factures",
+      "searchPlaceholder": "Rechercher par numéro ou client...",
+      "filterByStatus": "Filtrer par statut",
+      "empty": "Aucune facture trouvée",
+      "emptyFiltered": "Aucune facture ne correspond à vos critères"
+    }
+  }
+}
